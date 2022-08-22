@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class='h3'> {{ type }} </div>
+<div class='table-responsive'>
+    <table class="table table-fixed">
+        <thead>
+            <tr>
+                {% for key in data[0].keys() %}
+                    <th scope="col">{{key}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for value in data%}
+            <tr>                
+                {% for val in value.values() %}
+                    <th scope="col">{{val}}</th>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+</div>
+{% endblock %}
