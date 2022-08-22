@@ -26,8 +26,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-            ipython -m pip install --upgrade pip
-            pip install -r requirements.txt 
+          ipython -m pip install --upgrade pip
+          pip install -r requirements.txt 
     - name: Test with pytest
       run: |
         pytest test.py
