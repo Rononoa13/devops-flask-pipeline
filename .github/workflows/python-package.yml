@@ -38,6 +38,7 @@ jobs:
     - name: Push to docker hub
       uses: docker/build-push-action@v3
       with:
+        push: true
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: dockship001/sf21-devops-python
