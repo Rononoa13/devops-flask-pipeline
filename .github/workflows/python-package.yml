@@ -35,12 +35,12 @@ jobs:
     - name: Check docker installed or not
       run: docker run hello-world
       
-    - name: docker login
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        run: |
-          docker login -u $DOCKER_USERNAME -P DOCKER_PASSWORD
+#     - name: docker login
+#       env:
+#         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+#         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+#         run: |
+#           docker login -u $DOCKER_USERNAME -P DOCKER_PASSWORD
       
     - name: Push to docker hub
       uses: docker/build-push-action@v3
