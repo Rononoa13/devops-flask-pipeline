@@ -1,6 +1,18 @@
 FROM python
-COPY . /app
+
+# copy the requirements file into the image
+COPY ./requirements.txt .
+
+# switch working directory
 WORKDIR /app
-COPY requirements.txt .
+
+# install the dependencies and packages in the requirements file
 RUN pip install -r requirements.txt
-CMD [ "python", "app.py" ]
+
+# copy every content from the local file to the image
+COPY . /app
+
+# configure the container to run in an executed manner
+ENTRYPOINT [ "python" ]
+
+CMD ["app.py" ]
