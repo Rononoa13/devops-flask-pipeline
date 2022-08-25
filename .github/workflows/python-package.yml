@@ -47,7 +47,7 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: docker push dockship001/sf21-devops-python
+        repository: dockship001/sf21-devops-python
         context: .
         push: true
       
